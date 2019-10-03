@@ -11,7 +11,6 @@ const { SubMenu } = Menu;
         const path=this.props.location.pathname
         return menuList.map(item=>{
             if(!item.children){
-                console.log(item.key)
                 return (
                     <Menu.Item key={item.key}>
                     <Link to={item.key}>
@@ -43,36 +42,6 @@ const { SubMenu } = Menu;
             }
         })
     }
-    // reduce()方法遍历数组生成dom:
-    // getMenuNodes=(menuList)=>{
-    //     return menuList.reduce((pre,item)=>{
-    //         if(!item){
-    //             pre.push((
-    //                 <Menu.Item key={item.key}>
-    //                  <Link to={item.key}>
-    //                  <Icon type={item.icon} />
-    //                      <span>{item.title}</span>
-    //                  </Link>
-    //                  </Menu.Item>
-    //             ))
-    //         }else{
-    //             pre.push((
-    //                 <SubMenu
-    //             key={item.key}
-    //             title={
-    //             <span>
-    //                 <Icon type={item.icon} />
-    //             <span>{item.title}</span>
-    //           </span>
-    //             }
-    //             >
-    //             {this.getMenuNodes(item.children)}
-    //             </SubMenu>
-    //             ))
-    //         }
-    //         return pre
-    //     },[])
-    // }
     componentWillMount(){
         //在第一次render之前执行一次，为第一次render渲染做准备（同步）
         this.menuNods=this.getMenuNodes(menuList);

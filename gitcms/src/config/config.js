@@ -1,21 +1,21 @@
 const menuList=[
     {
-        title:"首页",
+        title:"Banner",
         key:"/",
         icon:"home"
     },
     {
-        title:"商品",
+        title:"教师和菜品",
         key:"/products",
         icon:"appstore",
         children:[
             {
-                title:"类品管理",
+                title:"教师",
                 key:"/category",
                 icon:"bars"
             },
             {
-                title:"商品管理",
+                title:"菜品",
                 key:"/product",
                 icon:"tool"
             }

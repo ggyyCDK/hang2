@@ -8,7 +8,7 @@ const app = dva();
 // app.use({});
 
 // 3. Model
-// app.model(require('./models/bannerM.js').default);
+app.model(require('./models/bannerM.js').default);
 
 // 4. Router
 app.router(require('./router').default);
